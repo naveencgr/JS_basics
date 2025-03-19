@@ -5,7 +5,12 @@
 function walkDog() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("PR: you walk a dog");
+      let dogWalked = false;
+      if (dogWalked) {
+        resolve("PR: you walk a dog");
+      } else {
+        reject("PR: you didn't walk a dog");
+      }
     }, 1500);
   });
 }
